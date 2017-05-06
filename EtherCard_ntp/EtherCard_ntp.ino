@@ -36,14 +36,14 @@ static int currentTimeserver = 0;
 #define NUM_TIMESERVERS 5
 
 // Create an entry for each timeserver to use
-prog_char ntp0[] PROGMEM = "ntp2d.mcc.ac.uk";
-prog_char ntp1[] PROGMEM = "ntp2c.mcc.ac.uk";
-prog_char ntp2[] PROGMEM = "ntp.exnet.com";
-prog_char ntp3[] PROGMEM = "ntp.cis.strath.ac.uk";
-prog_char ntp4[] PROGMEM = "clock01.mnuk01.burstnet.eu";
+const char ntp0[] PROGMEM = "ntp2d.mcc.ac.uk";
+const char ntp1[] PROGMEM = "ntp2c.mcc.ac.uk";
+const char ntp2[] PROGMEM = "ntp.exnet.com";
+const char ntp3[] PROGMEM = "ntp.cis.strath.ac.uk";
+const char ntp4[] PROGMEM = "clock01.mnuk01.burstnet.eu";
 
 // Now define another array in PROGMEM for the above strings
-prog_char *ntpList[] PROGMEM = { ntp0, ntp1, ntp2, ntp3, ntp4 };
+const char* const ntpList[] PROGMEM = { ntp0, ntp1, ntp2, ntp3, ntp4 };
   
 // Packet buffer, must be big enough to packet and payload
 #define BUFFER_SIZE 550
